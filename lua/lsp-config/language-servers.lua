@@ -35,8 +35,6 @@ local servers = {
     "tsserver",
     "emmet_ls",
     "sumneko_lua",
-    "ltex",
-    "eslint",
 }
 
 ---@diagnostic disable-next-line: undefined-global

@@ -6,11 +6,9 @@ return require'packer'.startup(function()
     --temas
     use 'ellisonleao/gruvbox.nvim'
 
-    --iconos
-    use 'kyazdani42/nvim-web-devicons'
-
-    --lsp
+    --lsp - 0icon to definitions
     use 'neovim/nvim-lspconfig'
+    use 'onsails/lspkind-nvim'
 
     --explorador de archivos
     use 'kyazdani42/nvim-tree.lua'
@@ -20,17 +18,31 @@ return require'packer'.startup(function()
     use 'hrsh7th/cmp-nvim-lsp' -- LSP source for nvim-cmp
     use 'saadparwaiz1/cmp_luasnip' -- Snippets source for nvim-cmp
     use 'L3MON4D3/LuaSnip' -- Snippets plugin
+    use 'hrsh7th/cmp-path'
+    use 'hrsh7th/cmp-buffer'
+
+    
+    -- git
+    use {
+      'lewis6991/gitsigns.nvim',
+      config = function()
+      require('gitsigns').setup()
+     end
+    
+ }
+    -- Notificaciones
     use 'rcarriga/nvim-notify'
-    use 'nvim-treesitter/nvim-treesitter-refactor'
 
     --para navegar entre los buffer
     use 'romgrk/barbar.nvim'
 
+    -- barra inferior - icons
     use 'nvim-lualine/lualine.nvim' 
+    use 'kyazdani42/nvim-web-devicons'
+
 
     --me permite instalr lenguajes muy rapido
     use 'williamboman/nvim-lsp-installer'
-    use 'onsails/lspkind-nvim'
 
     --Buscador
     use {'nvim-telescope/telescope.nvim',
@@ -39,6 +51,6 @@ return require'packer'.startup(function()
 
     --Sintaxys
      use {'nvim-treesitter/nvim-treesitter'}
-
+     use 'nvim-treesitter/nvim-treesitter-refactor'
 end)
 
