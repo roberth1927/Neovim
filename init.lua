@@ -8,8 +8,7 @@ require('lsp-config.nvim-cmp')
 require('lualine-config')
 require('barbar-config')
 require('treesitter-config')
-
-
+require('plugin/gitsigns')
 
 
 

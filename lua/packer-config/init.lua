@@ -27,8 +27,10 @@ return require'packer'.startup(function(use)
       config = function()
       require('gitsigns').setup()
      end
-    
- }
+     }
+    use 'kdheepak/lazygit.nvim'
+    use 'tpope/vim-fugitive'
+
     -- Notificaciones
     use 'rcarriga/nvim-notify'
 
