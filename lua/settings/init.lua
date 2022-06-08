@@ -2,6 +2,9 @@ local set = vim.opt
 
 
 
+vim.api.nvim_exec([[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE ]], false)
+
+
 set.expandtab = true
 set.smarttab = true
 set.scrolloff = 10
@@ -24,6 +27,8 @@ set.hidden = true
 set.termguicolors = true
 set.relativenumber =true
 set.cursorline =   true
+--set.mouse = 'a'
+--set.clipboard = 'unnamed'
 --set.history = 100
 --set.lazyredraw = true
 --set.synmaxcol = 240

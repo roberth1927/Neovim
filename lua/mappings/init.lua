@@ -8,13 +8,14 @@ vim.g.mapleader = " "
 --nvim-tree explorador de archivos
 map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
-map("n", "<leader>r", ":NvimTreeResize<CR>", opts)
+map("n", "<leader>R", ":NvimTreeResize +5<CR>", opts)
+map("n", "<leader>r", ":NvimTreeResize -5<CR>", opts)
 
 --mapping barbar - buffer
 map('n', '<A-,>', ':BufferPrevious<CR>', opts)
 map('n', '<A-.>', ':BufferNext<CR>', opts)
 map('n', '<A-<>', ':BufferMovePrevious<CR>', opts)
-map('n', '<A->>', ' :BufferMoveNext<CR>', opts)
+map('n', '<A->>', ':BufferMoveNext<CR>', opts)
 map('n', '<A-1>', ':BufferGoto 1<CR>', opts)
 map('n', '<A-2>', ':BufferGoto 2<CR>', opts)
 map('n', '<A-3>', ':BufferGoto 3<CR>', opts)
@@ -33,6 +34,12 @@ map('n', '<Space>bl', ':BufferOrderByLanguage<CR>', opts)
 
 
 --Telescope - buscador
-map('n', '<leader>ff', ':Telescope find_files<CR>', opts)
-map('n', '<leader>fg', ':Telescope live_grep<CR>', opts)
+map('n', '<leader>f', ':Telescope find_files<CR>', opts)
+map('n', '<leader>g', ':Telescope live_grep<CR>', opts)
+map('n', '<leader>b', ':Telescope buffers<CR>', opts)
+map('n', '<leader>o', ':Telescope oldfiles<CR>', opts)
 
+
+
+map('n', '<leader>rt', ':botright vertical terminal<CR>',opts)
+--map('nt', '<Esc>', '<C-\><C-n>',opts)
