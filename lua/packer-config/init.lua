@@ -1,4 +1,4 @@
-return require'packer'.startup(function()	
+return require'packer'.startup(function(use)	
 
     --administrador packer
     use 'wbthomason/packer.nvim'
@@ -21,7 +21,6 @@ return require'packer'.startup(function()
     use 'hrsh7th/cmp-path'
     use 'hrsh7th/cmp-buffer'
 
-    
     -- git
     use {
       'lewis6991/gitsigns.nvim',
@@ -52,5 +51,7 @@ return require'packer'.startup(function()
     --Sintaxys
      use {'nvim-treesitter/nvim-treesitter'}
      use 'nvim-treesitter/nvim-treesitter-refactor'
+
+
 end)
 
