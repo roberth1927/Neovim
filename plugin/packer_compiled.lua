@@ -84,8 +84,6 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/barbar.nvim",
     url = "https://github.com/romgrk/barbar.nvim"
   },
-<<<<<<< HEAD
-=======
   ["cder.nvim"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/cder.nvim",
@@ -96,7 +94,6 @@ _G.packer_plugins = {
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/cmp-buffer",
     url = "https://github.com/hrsh7th/cmp-buffer"
   },
->>>>>>> refs/remotes/origin/main
   ["cmp-nvim-lsp"] = {
     loaded = true,
     path = "/home/robin/.local/share/nvim/site/pack/packer/start/cmp-nvim-lsp",

@@ -1,10 +1,6 @@
 local set = vim.opt
 
-<<<<<<< HEAD
-
-=======
 vim.notify = require("notify")
->>>>>>> refs/remotes/origin/main
 
 vim.api.nvim_exec([[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE ]], false)
 
