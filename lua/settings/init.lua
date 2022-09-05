@@ -5,6 +5,7 @@ vim.notify = require("notify")
 vim.api.nvim_exec([[ autocmd VimEnter * hi Normal ctermbg=NONE guibg=NONE ]], false)
 
 set.expandtab = true
+set.softtabstop = 4
 set.smarttab = true
 set.scrolloff = 10
 set.shiftwidth = 4
