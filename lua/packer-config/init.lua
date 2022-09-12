@@ -72,6 +72,13 @@ return require'packer'.startup(function(use)
        -- indent line
      use 'lukas-reineke/indent-blankline.nvim'
     
+    
+     -- blade de laravel
+    use "jwalton512/vim-blade"
+
+    -- comentar
+    use "tpope/vim-commentary"
+
 
 end)
 
