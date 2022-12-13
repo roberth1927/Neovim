@@ -10,6 +10,21 @@ map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 map("n", "<leader>R", ":NvimTreeResize +5<CR>", opts)
 map("n", "<leader>r", ":NvimTreeResize -5<CR>", opts)
+map("n", "<leader>r", ":NvimTreeResize -5<CR>", opts)
+
+
+-- save and out
+map("n", "<leader>w", ":w<CR>", opts)
+map("n", "<leader>q", ":q<CR>", opts)
+
+
+-- sessions
+
+map("n", "<leader>ss", ":SaveSession<CR>", opts)
+map("n", "<leader>rs", ":RestoreSession<CR>", opts)
+
+
+
 
 --mapping barbar - buffer
 map('n', '<A-,>', ':BufferPrevious<CR>', opts)

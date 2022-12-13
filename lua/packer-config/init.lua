@@ -1,4 +1,4 @@
-return require'packer'.startup(function(use)	
+    return require'packer'.startup(function(use)	
 
     --administrador packer
     use 'wbthomason/packer.nvim'
@@ -78,6 +78,12 @@ return require'packer'.startup(function(use)
 
     -- comentar
     use "tpope/vim-commentary"
+
+
+    -- auto session
+    use {'rmagatti/auto-session',
+    config = function() require("auto-session").setup {} end
+}
 
 
 end)
