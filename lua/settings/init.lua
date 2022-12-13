@@ -31,7 +31,7 @@ set.smartindent = true
 --set.colorcolumn = '80'
 --set.shortmess:append {c = true}
 --set.mouse = 'a'
---set.clipboard = 'unnamed'
+set.clipboard = 'unnamedplus'
 --set.history = 100
 --set.synmaxcol = 240
 

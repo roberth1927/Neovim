@@ -2,9 +2,9 @@
 
 
 require('mappings')
-require('colorschema-config.gruvbox')
+--require('colorschema-config.gruvbox')
 --require('colorschema-config.nightfox')
---require('colorschema-config.neosolarized')
+require('colorschema-config.neosolarized')
 --require('colorschema-config.tokyonight')
 require('packer-config')
 require('nvim-tree-config')

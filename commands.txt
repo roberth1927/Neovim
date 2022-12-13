@@ -1,0 +1,83 @@
+VIM COMANDOS
+
+PARA MOVERSE
+* h = izquierda
+*l = derecha
+*k = arriba
+*j = abajo
+*w = izquierda de palabra en palabra
+*b = derecha de palabra en palabra
+*e = avanza al final de cada palabra
+
+INSERTAR TEXTO 
+* o = abre una línea para insertar
+* O = nueva línea encima del cursor
+* i = para ingresar en modo de insert
+* esc (dos veces) = para salir del modo insert
+* a = ingresa al modo insert justo después de donde se encuentra el cursor actualmente
+* A = modo insert al final de la línea actual
+* R = sirve para ir reemplazando caracter por caracter
+* shift + a = le lleva en modo de inserción al final de la línea
+* shift + i = me lleva al modo de inserción al principio de la línea
+
+
+ELIMINAR TEXTO
+* x = al principio de los caracteres que quiero eliminar
+* dw = elimina palabra completa
+* shift + d = eliminar todo lo que este después del cursor
+* d + número palabra a eliminar + w = eliminar cantidad de palabras que le especifique
+* cw = elimina una palabra desde donde está el cursor
+* ciw = borra toda la palabra sin importar donde esté el cursor
+
+GUARDAR ARCHIVO
+* :w = guarda los cambios
+* :wq = guarda y sale del archivo
+
+MOVERSE ENTRE ARCHIVOS
+* gd = para ver donde se usa o se defina una función o una variable
+* gf = ir a ver la definición de una función pero ya en el archivo donde esta creada
+* ctrl + o = me devuelvo en el historial de navegación
+* ctrl + i = voy hacia adelante en el historial
+* shift + 5 = me muevo entre el paréntesis de apertura y el de cierre
+* 0 = me lleva al principio de la línea
+* $ = me lleva al final
+
+DESHACER
+* u = para deshacer, como si fuera control + z
+* crtl + r = rehacer
+
+CORTAR PEGAR
+* yy = copia 
+* p = pegar linea de abajo
+* P = pegar linea de arriba
+* d +d = cortar
+
+OTRA FORMA DE CORTAR Y PEGAR
+* v = primero entrar en modo visual y desde donde esta el cursor me muevo y selecciono todo lo que quiero copiar y presiono "y" y pego con "p"
+
+
+
+SALTO DE LÍNEA Y BÚSQUEDA
+* gg = inicio del archivo
+* G = final del archivo
+* numero de linea + G = me lleva hasta ese línea en particular
+* / + búsqueda = busco a partir del curso todas las coincidencias
+* / + búsqueda = busco hacia atrás partir del curso todas las coincidencias
+* n y N = para ir navegando entre las coincidencias 
+
+BUSCAR Y REEMPLAZAR
+* :%s/palabra_a_reemplazar/palabra_nueva/ = busca y  reemplaza 
+
+
+CONFIGURACIONES DE TECLAS
+1 - LEADER + e = árbol de archivos
+2 - alt + r = buscador
+3 - q = salir buscador q
+4 - alt gr + {} = arriba o abajo pero con saltos des
+
+
+
+
+
+
+

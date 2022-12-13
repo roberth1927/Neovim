@@ -71,13 +71,13 @@
     }
        -- indent line
      use 'lukas-reineke/indent-blankline.nvim'
-    
-    
+
      -- blade de laravel
     use "jwalton512/vim-blade"
 
-    -- comentar
+    -- comentar seleciona  + gc
     use "tpope/vim-commentary"
+    use "tpope/vim-obsession"
 
 
     -- auto session
