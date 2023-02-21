@@ -66,6 +66,7 @@ SALTO DE LÍNEA Y BÚSQUEDA
 * n y N = para ir navegando entre las coincidencias 
 
 BUSCAR Y REEMPLAZAR
+:help :s
 * :%s/palabra_a_reemplazar/palabra_nueva/ = busca y  reemplaza 
 
 

@@ -1,1 +1,4 @@
-let a = 1;
+function someFunction() {
+  console.log('Hola');
+}
+ 

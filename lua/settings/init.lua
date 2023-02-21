@@ -34,5 +34,3 @@ set.smartindent = true
 set.clipboard = 'unnamedplus'
 --set.history = 100
 --set.synmaxcol = 240
-
-

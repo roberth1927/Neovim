@@ -1,4 +1,4 @@
-    return require'packer'.startup(function(use)	
+    return require'packer'.startup(function(use)
 
     --administrador packer
     use 'wbthomason/packer.nvim'
@@ -8,6 +8,8 @@
     use "EdenEast/nightfox.nvim"
     use 'overcache/NeoSolarized'
     use {'folke/tokyonight.nvim' }
+    use 'navarasu/onedark.nvim'
+
 
     --lsp - 0icon to definitions
     use 'neovim/nvim-lspconfig'
@@ -35,7 +37,13 @@
     use 'tpope/vim-fugitive'
 
     -- Notificaciones
-    use 'rcarriga/nvim-notify'
+    use  { 'rcarriga/nvim-notify' ,
+    config = function ()
+        require("notify").setup({
+            background_colour = "#FFFFFF",
+        });
+     end
+    }
 
     --para navegar entre los buffer
     use 'romgrk/barbar.nvim'

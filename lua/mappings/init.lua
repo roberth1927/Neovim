@@ -10,7 +10,7 @@ map("n", "<leader>t", ":NvimTreeToggle<CR>", opts)
 map("n", "<leader>e", ":NvimTreeFocus<CR>", opts)
 map("n", "<leader>R", ":NvimTreeResize +5<CR>", opts)
 map("n", "<leader>r", ":NvimTreeResize -5<CR>", opts)
-map("n", "<leader>r", ":NvimTreeResize -5<CR>", opts)
+map("n", "<leader>rf", ":NvimTreeRefresh<CR>", opts)
 
 
 -- save and out
@@ -22,6 +22,7 @@ map("n", "<leader>q", ":q<CR>", opts)
 
 map("n", "<leader>ss", ":SaveSession<CR>", opts)
 map("n", "<leader>rs", ":RestoreSession<CR>", opts)
+map("n", "<leader>as", ":Autosession search<CR>", opts)
 
 
 
@@ -54,7 +55,24 @@ map('n', '<leader>g', ':Telescope live_grep<CR>', opts)
 map('n', '<leader>b', ':Telescope buffers<CR>', opts)
 map('n', '<leader>o', ':Telescope oldfiles<CR>', opts)
 
-
+--dividir pestanias
+map("n", "<leader>v", ":vsplit<CR>", opts)
+map("n", "<leader>>", ":vertical resize +5<CR>", opts)
+map("n", "<leader><", ":vertical resize -5<CR>", opts)
 
 map('n', '<leader>rt', ':botright vertical terminal<CR>',opts)
 --map('nt', '<Esc>', '<C-\><C-n>',opts)
+
+--quitar seleccionados despues de buscar
+map('n',"<F3>", ':nohlsearch<CR>',opts)
+
+-- mapeo para buscar y reemplazar una palabra con confirmación
+map("n", "<leader>l", ":%s/\\V<c-r><c-w>//gc<CR>", opts)
+
+
+--busca la plabra donde esta el cursor en todo el doc
+map("n", "<leader>/", ":let @/=expand('<cword>')<CR>:set hls<CR>", opts)
+
+--plegar funcines POR REVISAR
+--map("n", "<leader>zo", ":set foldlevel=20<CR>", opts)
+--map("n", "<leader>zc", ":set foldlevel=0<CR>", opts)

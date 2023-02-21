@@ -34,7 +34,7 @@ local servers = {
     "pyright",
     "tsserver",
     "emmet_ls",
-    "sumneko_lua",
+    "lua_ls",
 }
 
 ---@diagnostic disable-next-line: undefined-global
