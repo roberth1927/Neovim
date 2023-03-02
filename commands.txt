@@ -22,12 +22,17 @@ INSERTAR TEXTO
 
 
 ELIMINAR TEXTO
-* x = al principio de los caracteres que quiero eliminar
-* dw = elimina palabra completa
+* x = borrar caracter a cracter 
+* dw = elimina palabra completa, hay que ubicarse al pricipio de la palbra
+* diw = elimina toda la palabra sobre la que esta el cursor 
+* db: borra desde el cursor hasta el inicio de la palabra.
+* de: borra desde el cursor hasta el final de la palabra.
+* dw: borra desde el cursor hasta el final de la palabra, incluyendo el espacio en blanco siguiente.
 * shift + d = eliminar todo lo que este después del cursor
 * d + número palabra a eliminar + w = eliminar cantidad de palabras que le especifique
 * cw = elimina una palabra desde donde está el cursor
-* ciw = borra toda la palabra sin importar donde esté el cursor
+* ciw = borra toda la palabra y entra en modi insert
+* D = elimina todo despues del cursor
 
 GUARDAR ARCHIVO
 * :w = guarda los cambios
@@ -51,10 +56,9 @@ CORTAR PEGAR
 * p = pegar linea de abajo
 * P = pegar linea de arriba
 * d +d = cortar
-
+* yiw = copia la palabra sobre donde esta el cursor
 OTRA FORMA DE CORTAR Y PEGAR
 * v = primero entrar en modo visual y desde donde esta el cursor me muevo y selecciono todo lo que quiero copiar y presiono "y" y pego con "p"
-
 
 
 SALTO DE LÍNEA Y BÚSQUEDA

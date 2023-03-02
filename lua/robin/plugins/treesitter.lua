@@ -1,3 +1,41 @@
+local filetypes = {
+    "html",
+    "javascriptreact",
+    "typescriptreact",
+    "vue",
+    "tsx",
+    "jsx",
+    "rescript",
+    "xml",
+    "php",
+    "markdown",
+    "glimmer",
+    "handlebars",
+    "hbs",
+    "json",
+    "http",
+  }
+  local skip_tags = {
+    "area",
+    "base",
+    "br",
+    "col",
+    "command",
+    "embed",
+    "hr",
+    "img",
+    "slot",
+    "input",
+    "keygen",
+    "link",
+    "meta",
+    "param",
+    "source",
+    "track",
+    "wbr",
+    "menuitem",
+  }
+  
 return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
@@ -5,8 +43,13 @@ return {
       "nvim-treesitter/playground",
       "nvim-treesitter/nvim-treesitter-refactor",
       "nvim-treesitter/nvim-treesitter-textobjects",
+      "windwp/nvim-ts-autotag",
   },
   config = function()
+    require("nvim-ts-autotag").setup({
+        filetypes = filetypes,
+        skip_tags = skip_tags,
+      })
       require "nvim-treesitter.configs".setup {
           ensure_installed = { "php", "phpdoc", "vim", "go", "gomod", "css", "html", "javascript", "lua", "typescript", "yaml", "query" },
           highlight = {
