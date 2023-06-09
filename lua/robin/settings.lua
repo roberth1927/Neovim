@@ -33,3 +33,4 @@ set.relativenumber =true
 set.cursorline =   true
 set.smartindent = true
 set.clipboard = 'unnamedplus'
+set.number = true

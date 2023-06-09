@@ -15,7 +15,6 @@ INSERTAR TEXTO
 * i = para ingresar en modo de insert
 * esc (dos veces) = para salir del modo insert
 * a = ingresa al modo insert justo después de donde se encuentra el cursor actualmente
-* A = modo insert al final de la línea actual
 * R = sirve para ir reemplazando caracter por caracter
 * shift + a = le lleva en modo de inserción al final de la línea
 * shift + i = me lleva al modo de inserción al principio de la línea
@@ -28,7 +27,6 @@ ELIMINAR TEXTO
 * db: borra desde el cursor hasta el inicio de la palabra.
 * de: borra desde el cursor hasta el final de la palabra.
 * dw: borra desde el cursor hasta el final de la palabra, incluyendo el espacio en blanco siguiente.
-* shift + d = eliminar todo lo que este después del cursor
 * d + número palabra a eliminar + w = eliminar cantidad de palabras que le especifique
 * cw = elimina una palabra desde donde está el cursor
 * ciw = borra toda la palabra y entra en modi insert
@@ -72,13 +70,6 @@ SALTO DE LÍNEA Y BÚSQUEDA
 BUSCAR Y REEMPLAZAR
 :help :s
 * :%s/palabra_a_reemplazar/palabra_nueva/ = busca y  reemplaza 
-
-
-CONFIGURACIONES DE TECLAS
-1 - LEADER + e = árbol de archivos
-2 - alt + r = buscador
-3 - q = salir buscador q
-4 - alt gr + {} = arriba o abajo pero con saltos des
 
 
 
