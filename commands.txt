@@ -57,7 +57,7 @@ CORTAR PEGAR
 * yiw = copia la palabra sobre donde esta el cursor
 OTRA FORMA DE CORTAR Y PEGAR
 * v = primero entrar en modo visual y desde donde esta el cursor me muevo y selecciono todo lo que quiero copiar y presiono "y" y pego con "p"
-
+* viw = para seleccionar toda la palbra donde se encuentra el cursor
 
 SALTO DE LÍNEA Y BÚSQUEDA
 * gg = inicio del archivo

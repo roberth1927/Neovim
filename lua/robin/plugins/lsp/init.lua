@@ -72,6 +72,7 @@ return {
           nls.builtins.formatting.eslint,
           nls.builtins.formatting.prettier,
           nls.builtins.formatting.stylua,
+          nls.builtins.formatting.stylua,
           nls.builtins.diagnostics.eslint.with({ method = nls.methods.DIAGNOSTICS_ON_SAVE }),
           nls.builtins.diagnostics.ruff.with({ extra_args = { "--max-line-length=180", method = nls.methods.DIAGNOSTICS_ON_SAVE } }),
           nls.builtins.diagnostics.phpcs.with({ extra_args = { "--standard=PSR12", method = nls.methods.DIAGNOSTICS_ON_SAVE }}),
