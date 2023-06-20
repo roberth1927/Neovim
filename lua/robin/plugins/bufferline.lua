@@ -32,11 +32,16 @@ return {
       enforce_regular_tabs = false,
       show_buffer_icons = true, -- disable filetype icons for buffers
       show_buffer_close_icons = false,
-      show_buffer_default_icon = false, -- whether or not an unrecognised filetype should show a default icon
+      --show_buffer_default_icon = false, -- whether or not an unrecognised filetype should show a default icon
+
+      get_icon = function(_, _, buf)
+          return require("nvim-web-devicons").get_icon(buf.name, buf.extension, { default = false })
+        end,
       show_close_icon = false,
       show_tab_indicators = false,
       show_duplicate_prefix = false, -- whether to show duplicate buffer prefix
       separator_style = { "", "" },
+
     },
     highlights = {
       buffer_selected = {

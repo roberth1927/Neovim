@@ -67,7 +67,6 @@
 
        -- barra inferior - icons
        use 'nvim-lualine/lualine.nvim' 
-       use 'kyazdani42/nvim-web-devicons'
 
 
      --close tegs

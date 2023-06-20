@@ -1,16 +1,36 @@
 return {
-  'nvim-neo-tree/neo-tree.nvim',
-  branch = "v2.x",
-  dependencies = {
-    "nvim-lua/plenary.nvim",
-    "MunifTanjim/nui.nvim",
-    "kyazdani42/nvim-web-devicons",
-  },
+  "nvim-neo-tree/neo-tree.nvim",
   cmd = "Neotree",
   keys = {
-    { "<leader>t", "<cmd>NeoTreeFloatToggle<cr>", desc = "Toogle Neotree" },
+    {
+      "<leader>fe",
+      function()
+        require("neo-tree.command").execute({ toggle = true, dir = require("lazyvim.util").get_root() })
+      end,
+      desc = "Explorer NeoTree (root dir)",
+    },
+    {
+      "<leader>fE",
+      function()
+        require("neo-tree.command").execute({ toggle = true, dir = vim.loop.cwd() })
+      end,
+      desc = "Explorer NeoTree (cwd)",
+    },
+    { "<leader>e", "<leader>fe", desc = "Explorer NeoTree (root dir)", remap = true },
+    { "<leader>E", "<leader>fE", desc = "Explorer NeoTree (cwd)", remap = true },
   },
-  event = "BufWinEnter",
+  deactivate = function()
+    vim.cmd([[Neotree close]])
+  end,
+  init = function()
+    vim.g.neo_tree_remove_legacy_commands = 1
+    if vim.fn.argc() == 1 then
+      local stat = vim.loop.fs_stat(vim.fn.argv(0))
+      if stat and stat.type == "directory" then
+        require("neo-tree")
+      end
+    end
+  end,
   opts = {
     close_if_last_window = false, -- Close Neo-tree if it is the last window left in the tab
     popup_border_style = "rounded",
@@ -59,7 +79,7 @@ return {
       },
     },
     window = {
-      position = "left",
+      position = "float",
       width = 30,
       mappings = {
         ["<2-LeftMouse>"] = "open",
@@ -137,21 +157,14 @@ return {
         }
       }
     }
-  },
-  config = function (_, opts)
-      -- Unless you are still migrating, remove the deprecated commands from v1.x
-      vim.cmd([[ let g:neo_tree_remove_legacy_commands = 1 ]])
-      -- If you want icons for diagnostic errors, you'll need to define them somewhere:
-      vim.fn.sign_define("DiagnosticSignError",
-        {text = " ", texthl = "DiagnosticSignError"})
-      vim.fn.sign_define("DiagnosticSignWarn",
-        {text = " ", texthl = "DiagnosticSignWarn"})
-      vim.fn.sign_define("DiagnosticSignInfo",
-        {text = " ", texthl = "DiagnosticSignInfo"})
-      vim.fn.sign_define("DiagnosticSignHint",
-        {text = "", texthl = "DiagnosticSignHint"})
-      -- NOTE: this is changed from v1.x, which used the old style of highlight groups
-      -- in the form "LspDiagnosticsSignWarning"
-    require('neo-tree').setup(opts)
-  end,
-}
+  }, config = function(_, opts)
+    require("neo-tree").setup(opts)
+    vim.api.nvim_create_autocmd("TermClose", {
+      pattern = "*lazygit",
+      callback = function()
+        if package.loaded["neo-tree.sources.git_status"] then
+          require("neo-tree.sources.git_status").refresh()
+        end
+      end,
+    })
+  end}                               

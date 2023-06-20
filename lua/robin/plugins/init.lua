@@ -1,7 +1,7 @@
 return {
   "nvim-lua/plenary.nvim",
   "MunifTanjim/nui.nvim",
-  "kyazdani42/nvim-web-devicons",
+  -- "kyazdani42/nvim-web-devicons",
   "jwalton512/vim-blade",
     {
       "rcarriga/nvim-notify",

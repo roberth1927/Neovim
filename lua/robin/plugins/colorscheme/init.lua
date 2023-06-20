@@ -20,18 +20,18 @@ return {
 
 	{
 		"Shatur/neovim-ayu",
-                 mirage = true,
-	 	init = function(_)
-		vim.cmd([[colorscheme ayu-mirage]])
-        end,
+		mirage = true,
+		init = function(_)
+			vim.cmd([[colorscheme ayu-mirage]])
+		end,
 		lazy = false,
 		priority = 1000,
 		config = function()
 			require("ayu").setup({
-                 mirage = false,
-				 style = "ayu-mirage",
+				mirage = false,
+				style = "ayu-mirage",
 			})
-			 -- require('ayu-mirage').load()
+			-- require('ayu-mirage').load()
 		end,
 	},
 	{
@@ -40,17 +40,8 @@ return {
 		priority = 1000,
 		config = function()
 			local tokyonight = require("tokyonight")
-			 tokyonight.setup({ style = "night" })
+			tokyonight.setup({ style = "night" })
 			-- tokyonight.load()
-		end,
-	},
-	{
-		"catppuccin/nvim",
-		lazy = false,
-		priority = 1000,
-		name = "catppuccin",
-		init = function()
-			--vim.cmd[[colorscheme catppuccin]]
 		end,
 	},
 	{
@@ -61,7 +52,7 @@ return {
 			require("onedark").setup({
 				style = "darker",
 			})
-			-- require('onedark').load()
+			require('onedark').load()
 		end,
 	},
 	{
@@ -72,7 +63,7 @@ return {
 			require("gruvbox").setup({
 				style = "dark",
 			})
-			-- require('gruvbox').load()
+			--require("gruvbox").load()
 		end,
 	},
 }
