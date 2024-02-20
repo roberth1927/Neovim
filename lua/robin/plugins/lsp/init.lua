@@ -6,7 +6,7 @@ return {
     dependencies = {
       { "folke/neoconf.nvim", cmd = "Neoconf", config = true },
       { "folke/neodev.nvim", config = true },
-      { "j-hui/fidget.nvim", config = true },
+      -- { "j-hui/fidget.nvim", config = true },
       { "smjonas/inc-rename.nvim", config = true },
       "williamboman/mason.nvim",
       "williamboman/mason-lspconfig.nvim",

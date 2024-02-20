@@ -52,7 +52,7 @@ return {
 			require("onedark").setup({
 				style = "darker",
 			})
-			require('onedark').load()
+		--	require('onedark').load()
 		end,
 	},
 	{
@@ -63,7 +63,8 @@ return {
 			require("gruvbox").setup({
 				style = "dark",
 			})
-			--require("gruvbox").load()
+		 require("gruvbox").load()
 		end,
 	},
+
 }

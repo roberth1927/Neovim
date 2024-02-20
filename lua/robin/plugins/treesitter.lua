@@ -59,6 +59,10 @@ return {
           indent = {
               enable = true,
           },
+          fold = {
+              enable = true,  -- Habilitar plegado de código
+              disable = { "comment" },
+            },
           incremental_selection = {
               enable = true,
               keymaps = {
