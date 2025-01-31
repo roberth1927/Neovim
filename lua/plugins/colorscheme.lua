@@ -1,4 +1,5 @@
 return {
+	{
 	"folke/tokyonight.nvim",
 	lazy = false,
 	priority = 1000,
@@ -16,6 +17,18 @@ return {
 				variables = { italic = true },
 			},
 		})
-		vim.cmd[[colorscheme tokyonight]]
+		-- vim.cmd[[colorscheme tokyonight]]
 	end,
+},
+{
+		"ellisonleao/gruvbox.nvim",
+		lazy = false,
+		priority = 1000,
+		config = function(_, opts)
+			require("gruvbox").setup({
+				style = "dark",
+			})
+		 require("gruvbox").load()
+		end,
+	},
 }

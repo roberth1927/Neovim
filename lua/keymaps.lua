@@ -72,3 +72,16 @@ map('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Togg
 map('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=true})<CR>', { desc = "Spectre Search current word", noremap = true })
 map('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word", noremap = true })
 map('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file", noremap = true})
+
+-- Guardar sesión actual
+map("n", "<leader>ss", "<cmd>lua require('persistence').save()<cr>", { desc = "Save session", noremap = true })
+
+-- Cargar última sesión
+map("n", "<leader>sl", "<cmd>lua require('persistence').load()<cr>", { desc = "Load last session", noremap = true })
+
+-- Pliegues
+map("n", "<leader>zc", "zc", { desc = "Collapse section", noremap = true })
+map("n", "<leader>zo", "zo", { desc = "Expand section", noremap = true })
+map("n", "<leader>zM", "zM", { desc = "Collapse all", noremap = true })
+map("n", "<leader>zR", "zR", { desc = "Expand all", noremap = true })
+

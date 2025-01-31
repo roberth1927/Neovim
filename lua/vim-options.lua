@@ -38,3 +38,10 @@ opt.splitright = true
 opt.splitbelow = true
 
 opt.iskeyword:append("-")
+
+-- Treesitter folding
+opt.foldmethod = "expr"       -- Usa 'expr' para el plegado basado en Treesitter
+opt.foldexpr = "nvim_treesitter#foldexpr()" -- Expresión de plegado
+opt.foldenable = true         -- Habilita el plegado por defecto
+opt.foldlevel = 99            -- Evita que todo el código se colapse al abrir Neovim
+opt.foldlevelstart = 99

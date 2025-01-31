@@ -1,15 +1,38 @@
 return {
-	{
-		"nvim-treesitter/nvim-treesitter",
-		event = { "BufReadPre", "BufNewFile" }, -- load when a buffer is opened or created
-		build = ":TSUpdate",
-		config = function()
-			local config = require("nvim-treesitter.configs")
-			config.setup({
-				auto_install = true,
-				highlight = { enable = true },
-				indent = { enable = true },
-			})
-		end,
-	},
+  "nvim-treesitter/nvim-treesitter",
+  event = { "BufReadPre", "BufNewFile" },
+  config = function()
+    require("nvim-treesitter.configs").setup({
+      ensure_installed = { "lua", "python", "javascript", "typescript", "go", "rust", "php" }, -- Lista de lenguajes que quieres soportar
+      highlight = {
+        enable = true,
+      },
+      indent = {
+        enable = true,
+      },
+      folding = {
+        enable = true,
+      },
+      refactor = {
+        highlight_definitions = { enable = true },
+        highlight_current_scope = { enable = false },
+        smart_rename = {
+          enable = true,
+          keymaps = {
+            smart_rename = "grr",
+          },
+        },
+        navigation = {
+          enable = true,
+          keymaps = {
+            goto_definition = "gnd",
+            list_definitions = "gnD",
+            list_definitions_toc = "gO",
+            goto_next_usage = "<a-*>",
+            goto_previous_usage = "<a-#>",
+          },
+        },
+      },
+    })
+  end,
 }
