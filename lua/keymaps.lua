@@ -52,7 +52,14 @@ map("n", "<C-Right>", ":vertical resize +3<CR>")
 map("n", "<Tab>", ":BufferNext<CR>", { desc = "Move to next tab", noremap = true })
 map("n", "<S-Tab>", ":BufferPrevious<CR>", { desc = "Move to previous tab", noremap = true })
 map("n", "<leader>x", ":BufferClose<CR>", { desc = "Buffer close", noremap = true })
+map("n", "<leader>X", ":BufferCloseAllButCurrent<CR>", { desc = "Close all buffers except current", noremap = true })
 map("n", "<A-p>", ":BufferPin<CR>", { desc = "Pin buffer", noremap = true })
+map("n", "<A-.>", ":BufferMoveNext<CR>", { desc = "Move buffer to the right", noremap = true })
+map("n", "<A-,>", ":BufferMovePrevious<CR>", { desc = "Move buffer to the left", noremap = true })
+map("n", "<A-S-Tab>", ":BufferLast<CR>", { desc = "Toggle last used buffer", noremap = true })
+map("n", "<leader>bl", ":BufferCloseBuffersLeft<CR>", { desc = "Close buffers to the left", noremap = true })
+map("n", "<leader>bm", ":BufferPick<CR>", { desc = "Pick buffer from menu", noremap = true })
+
 
 -- Comments
 map({"n", "v"}, "<leader>co", ":CommentToggle<cr>", { desc = "CommentToggle", noremap = true })
