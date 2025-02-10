@@ -1,4 +1,8 @@
-vim.opt.guifont = "Fira Code:h2"
+--vim.opt.guifont = "Fira Code:h2"
+vim.opt.guifont = "JetBrains Mono:h8"
+--vim.opt.guifont = "Source Code Pro:h12"
+--vim.opt.guifont = "Inconsolata:h10:italic"
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
   vim.fn.system({
