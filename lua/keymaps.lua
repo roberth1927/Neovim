@@ -67,6 +67,10 @@ map({"n", "v"}, "<leader>co", ":CommentToggle<cr>", { desc = "CommentToggle", no
 -- Neotree
 map("n", "<leader>b", ":Neotree toggle<CR>", { desc = "Toggle Neotree", noremap = true })
 map("n", "<leader>nb", ":Neotree buffer reveal float<CR>", { desc = "Neotree buffers reveal", noremap = true })
+map("n", "<leader>e", ":Neotree focus<CR>", { desc = "Focus Neotree", noremap = true })
+map("n", "<leader>o", ":wincmd p<CR>", { desc = "Focus current file", noremap = true })
+map("n", "<leader>t", ":Neotree toggle<CR>:wincmd p<CR>", { desc = "Toggle Neotree focus", noremap = true })
+
 
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope find_files", noremap = true })
