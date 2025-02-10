@@ -73,6 +73,9 @@ map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope find
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live_grep", noremap = true })
 map("n", "<leader>fr", "<cmd>Telescope oldfiles<cr>", { desc = "Telescope oldfiles", noremap = true })
 map("n", "<leader>fb", "<cmd>Telescope buffers<cr>", { desc = "Telescope buffers", noremap = true })
+map("n", "<leader>ss", "<cmd>SessionSave<cr>", { desc = "Save Session", noremap = true })
+map("n", "<leader>sl", "<cmd>Telescope session-lens<cr>", { desc = "List Sessions", noremap = true })
+map("n", "<leader>sd", "<cmd>!rm -f ~/.local/share/nvim/sessions/*.vim<cr>", { desc = "Delete Sessions", noremap = true })-- para elminar la sesion presiono ctrl + d
 
 -- Spectre
 map('n', '<leader>S', '<cmd>lua require("spectre").toggle()<CR>', { desc = "Toggle Spectre", noremap = true })
@@ -80,11 +83,6 @@ map('n', '<leader>sw', '<cmd>lua require("spectre").open_visual({select_word=tru
 map('v', '<leader>sw', '<esc><cmd>lua require("spectre").open_visual()<CR>', { desc = "Search current word", noremap = true })
 map('n', '<leader>sp', '<cmd>lua require("spectre").open_file_search({select_word=true})<CR>', { desc = "Search on current file", noremap = true})
 
--- Guardar sesión actual
-map("n", "<leader>ss", "<cmd>lua require('persistence').save()<cr>", { desc = "Save session", noremap = true })
-
--- Cargar última sesión
-map("n", "<leader>sl", "<cmd>lua require('persistence').load()<cr>", { desc = "Load last session", noremap = true })
 
 -- Pliegues
 map("n", "<leader>zc", "zc", { desc = "Collapse section", noremap = true })
