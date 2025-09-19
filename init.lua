@@ -1,49 +1,27 @@
-require('settings')
-require('mappings')
---require('colorschema-config.gruvbox')
---require('colorschema-config.nightfox')
-require('colorschema-config.onedark')
---require('colorschema-config.neosolarized')
---require('colorschema-config.tokyonight')
-require('packer-config')
-require('nvim-tree-config')
-require('lsp-config.language-servers')
-require('lsp-config.nvim-cmp')
-require('lualine-config')
---require('galaxyline')
-require('barbar-config')
-require('treesitter-config')
+vim.opt.guifont = "Fira Code:h2"
+--vim.opt.guifont = "JetBrains Mono:h8"
+--vim.opt.guifont = "Source Code Pro:h12"
+--vim.opt.guifont = "Inconsolata:h10:italic"
+local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
+if not vim.loop.fs_stat(lazypath) then
+  vim.fn.system({
+    "git",
+    "clone",
+    "--filter=blob:none",
+    "https://github.com/folke/lazy.nvim.git",
+    "--branch=stable", -- latest stable release
+    lazypath,
+  })
+end
+vim.opt.rtp:prepend(lazypath)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+require("vim-options")
+require("keymaps")
+require("lazy").setup({
+  spec = {
+    { import = "plugins" }, -- loads all plugins in plugins/
+  },
+  defaults = {
+    lazy = false, -- plugins are not lazy loaded by default
+  },
+})
