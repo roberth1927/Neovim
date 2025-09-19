@@ -23,12 +23,10 @@ return {
         "ellisonleao/gruvbox.nvim",
         lazy = false,
         priority = 1000,
-        config = function(_, opts)
-            require("gruvbox").setup({
-                style = "dark",
-            })
-             require("gruvbox").load()
-        end,
+        opts = {
+            -- ¡Esta es la opción nativa para la transparencia!
+            transparent_mode = "hard", 
+        },
     },
     {
         "dracula/vim",

@@ -72,6 +72,7 @@ map("n", "<leader>o", ":wincmd p<CR>", { desc = "Focus current file", noremap = 
 map("n", "<leader>t", ":Neotree toggle<CR>:wincmd p<CR>", { desc = "Toggle Neotree focus", noremap = true })
 
 
+
 -- Telescope
 map("n", "<leader>ff", "<cmd>Telescope find_files<cr>", { desc = "Telescope find_files", noremap = true })
 map("n", "<leader>fg", "<cmd>Telescope live_grep<cr>", { desc = "Telescope live_grep", noremap = true })

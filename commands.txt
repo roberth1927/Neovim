@@ -28,6 +28,7 @@ ELIMINAR TEXTO
 * d + número palabra a eliminar + w = eliminar cantidad de palabras que le especifique
 * cw = elimina una palabra desde donde está el cursor
 * ciw = borra toda la palabra sin importar donde esté el cursor
+* yiw = copia toda la palabra sin importar donde esté el cursor
 
 GUARDAR ARCHIVO
 * :w = guarda los cambios
